@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }}'s Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resume_style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{{ name }}</h1>
+            <p>{{ contact_info|safe }}</p>
+        </header>
+        <main>
+            <section>
+                <h2>Summary</h2>
+                <p>{{ summary }}</p>
+            </section>
+            <section>
+                <h2>Experience</h2>
+                <ul>
+                    {% for job in experience %}
+                    <li>
+                        <h3>{{ job.title }}</h3>
+                        <p>{{ job.company }} - {{ job.dates }}</p>
+                        <p>{{ job.description }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section>
+                <h2>Education</h2>
+                <ul>
+                    {% for edu in education %}
+                    <li>
+                        <h3>{{ edu.degree }}</h3>
+                        <p>{{ edu.institution }} - {{ edu.dates }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section>
+                <h2>Skills</h2>
+                <ul>
+                    {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section>
+                <h2>Certifications</h2>
+                <ul>
+                    {% for cert in certifications %}
+                    <li>{{ cert }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
