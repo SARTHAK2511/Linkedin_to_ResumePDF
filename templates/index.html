@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn PDF to HTML Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LinkedIn PDF to HTML Converter</h1>
+            <p>Transform your LinkedIn resume with AI-powered conversion</p>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Enter your Gemini API Key</h2>
+                <form action="/" method="post">
+                    <div class="input-group">
+                        <input type="text" id="api_key" name="api_key" required placeholder="Your Gemini API Key">
+                    </div>
+                    <button type="submit" class="btn">Get Started</button>
+                </form>
+            </div>
+            <div class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>Convert LinkedIn PDF resumes to HTML format</li>
+                    <li>AI-powered text extraction and formatting</li>
+                    <li>Clean and readable HTML output</li>
+                    <li>Easy to use interface</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or need support, feel free to reach out:</p>
+                <ul>
+                    <li>Email: support@pdf2htmlconverter.com</li>
+                    <li>Phone: +1 (555) 123-4567</li>
+                    <li>Address: 1234 Elm Street, Some City, Some Country</li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 LinkedIn PDF to HTML Converter. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
